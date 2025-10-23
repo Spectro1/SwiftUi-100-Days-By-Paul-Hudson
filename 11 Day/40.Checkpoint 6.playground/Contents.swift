@@ -7,6 +7,7 @@
 ///You can create your own custom initializers if you want, but you must always make sure all properties in your struct have a value by the time the initializer finishes, and before you call any other methods.
 ///We can use access to mark any properties and methods as being available or unavailable externally, as needed.
 ///It’s possible to attach a property or methods directly to a struct, so you can use them without creating an instance of the struct.
+import UiKit
 
 struct Bmw {
     private(set) var vin =  "1987297892"

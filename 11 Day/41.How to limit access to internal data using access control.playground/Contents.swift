@@ -15,3 +15,12 @@ struct BanckAccout {
         }
     }
 }
+//var account = BankAccount()
+//account.deposit(amount: 100)
+//let success = account.withdraw(amount: 200)
+//
+//if success {
+//    print("Withdrew money successfully")
+//} else {
+//    print("Failed to get the money")
+//}

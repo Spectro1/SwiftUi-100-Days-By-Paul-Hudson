@@ -12,7 +12,6 @@ print(School.studentCount)
 
 
 //self the current VALUE  of the struct
-//
 //Self the current TYPE of struct
 
 struct AppData {
@@ -28,3 +27,8 @@ struct Employee {
     
     static let example = Employee(username: "gsgdhd", password: "ksjsjj")
 }
+
+// its not posible to make it static to non- static
+// but it is non-static to static is
+
+ 

@@ -18,7 +18,7 @@ struct Book {
 }
 let book = Book(tittle: "Harry", author: nil)
 let author = book.author ?? "Anonymous"
-print(book)
+print(author)
 
 let input = ""
 let number = Int(input) ?? 0

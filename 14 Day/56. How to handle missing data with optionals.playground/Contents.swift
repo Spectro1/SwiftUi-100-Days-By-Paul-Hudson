@@ -28,8 +28,33 @@ if let unwappedNumber = number {
     print(square(number: unwappedNumber))
 }
 
+
+/// whenever you what to make a optional will be the
+ var name : String? = nil
+///
+///
 //var number1: Int? = nil
 //
 //if let number1 = number1 {
 //    print(square(number1 : number1))
 //}
+
+
+// this is technique called shadowing = when you unwappedValue
+
+
+var car : Int? = nil
+
+if let unwappcar = car {
+    print(("nothing works"),square(number: unwappcar))
+} else {
+    print("car is nil")
+}
+
+
+let mycar = 5
+car = mycar
+if let unwappcar = car {
+    print("after assugment:", square(number: unwappcar))
+}
+

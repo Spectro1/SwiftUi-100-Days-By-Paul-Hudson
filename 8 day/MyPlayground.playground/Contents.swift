@@ -5,7 +5,7 @@ import Cocoa
     You can't use the built-in sqrt0 function or similar - you need to find
     the square root yourself.
     If the number is less than 1 or greater than 10,000 you should */
-import Cocoa
+
 
 enum numberError: Error {
     case outOfBounds, noRoot
@@ -13,26 +13,23 @@ enum numberError: Error {
  
 func checkSquareRoot(_ number: Int) throws -> Int {
     if number < 1 || number > 10_000 {
-        print(numberError.outOfBounds)
+        throw numberError.outOfBounds
     }
 
-    var root = 0 //  a variable to store and return the result of the loop.
 
     for i in 1...100 {
-        if number == i * i {
-            root = i // assignes the value of i to root
+        if i * i == number {
+            return i
             
         }
     }
 
-    if root == 0 { // if root hasn't received a new value, throws an error.
         throw numberError.noRoot
-    }
+    
 
-    return root
 }
 
-let input = 100
+let input = 10000
 
 do {
     let result = try checkSquareRoot(input)

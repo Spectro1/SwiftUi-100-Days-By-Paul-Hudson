@@ -1,4 +1,6 @@
 
+
+
 func printSq(of number: Int?) {
     guard let number = number else {
         print("Missing input")
@@ -10,15 +12,15 @@ func printSq(of number: Int?) {
 let Kev: () = printSq(of: 5)
 
 
-var myVar: Int? = 3
-if let unwapped = myVar{
-    // Run if my var has a value inside
+func validate(password: String?) -> Bool {
+    guard let password = password else {
+        return false
+    }
+    if password == "fr0sties" {
+        print("Authenticated successfully!")
+        return true
+    }
+    return false
 }
-
-guard let unwapped = myVar else {
-    // Run if unwapped doesn't have a value inside
-    print("hello world")
-    return
-}
-
+validate(password: "fr0sties")
 
