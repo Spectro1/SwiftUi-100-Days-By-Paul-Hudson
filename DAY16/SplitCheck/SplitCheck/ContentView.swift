@@ -14,7 +14,7 @@ struct ContentView: View {
     @State private var tipPercentage = 20
     
     
-let tipPercentag = [10, 15, 18, 20, 0]
+let tipPercentages = [10, 15, 18, 20, 0]
     var body: some View {
         NavigationStack{
             Form{
@@ -27,6 +27,11 @@ let tipPercentag = [10, 15, 18, 20, 0]
                             Text("\($0) people")
                         }
                     }.pickerStyle(.menu)
+                }
+                Picker("Tip %", selection: $tipPercentage){
+                    ForEach(tipPercentages, id: \.self) {
+                        Text($0, format: .percent)
+                    }
                 }
                 Section {
                     Text(checkAmount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
