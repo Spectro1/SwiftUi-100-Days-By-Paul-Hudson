@@ -72,3 +72,5 @@ let tipPercentages = [10, 15, 18, 20, 0]
 #Preview {
     ContentView()
 }
+
+// app finished.
